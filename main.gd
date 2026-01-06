@@ -11,6 +11,7 @@ var grid_data : Array
 var grid_pos : Vector2i	#i stands for integer
 var board_size	: int
 var cell_size	: int
+var row_sum : int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -45,6 +46,12 @@ func _input(event):
 					
 					# other player's turn
 					player *= -1
+					
+					# update the panel marker
+					temp_marker.queue_free() # hides the previous mark
+					create_marker(player, player_panel_pos + Vector2i(cell_size / 2, cell_size / 2), true)
+
+					
 					print(grid_data)
 
 # no _ before func name cuz its not godot-made
