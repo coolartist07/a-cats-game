@@ -52,6 +52,8 @@ func _input(event):
 						# if there's a winner, game won't continue
 						get_tree().paused = true
 						
+						# show game over menu
+						$GameOverMenu.show()
 					
 					
 					# other player's turn
@@ -74,10 +76,23 @@ func new_game():
 		[0, 0, 0], 
 		[0, 0, 0]
 		]
-		
+
+	# reset board variables
+	row_sum = 0
+	col_sum = 0
+	diagonal_sum = 0
+	diagonal2 = 0
+	
+	# clear existing markers
+	get_tree().call_group("circles", "queue_free")
+	get_tree().call_group("crosses", "queue_free")
+
 	# create a marker to show starting player's turn
 	create_marker(player, player_panel_pos + Vector2i(cell_size / 2, cell_size / 2), true)
-
+	$GameOverMenu.hide()
+	
+	# unpause the game
+	get_tree().paused = false
 func create_marker(player, position, temp = false):
 	# create a marker node and it as a child
 	if player == 1:
@@ -106,3 +121,7 @@ func check_win():
 			winner = 2
 			
 	return winner
+
+
+func _on_game_over_menu_restart() -> void:
+	new_game()
