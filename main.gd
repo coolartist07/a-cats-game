@@ -5,6 +5,7 @@ extends Node
 
 # variable declarations
 var player : int
+var moves : int
 var winner : int
 var temp_marker
 var player_panel_pos : Vector2i
@@ -42,6 +43,7 @@ func _input(event):
 				
 				# check if cell is empty
 				if grid_data[grid_pos.y][grid_pos.x] == 0:
+					moves += 1
 					# [column][row]
 					grid_data[grid_pos.y][grid_pos.x] = player
 					
@@ -55,7 +57,18 @@ func _input(event):
 						# show game over menu
 						$GameOverMenu.show()
 					
-					
+						if winner == 1:
+							$GameOverMenu.get_node("ResultLabel").text = "Player 1 Wins!"
+							
+						elif winner == -1:
+							$GameOverMenu.get_node("ResultLabel").text = "Player 2 Wins!"
+							
+					# check if the board is filled (tie game)
+					elif moves == 9:
+						get_tree().paused = true
+						$GameOverMenu.show()
+						$GameOverMenu.get_node("ResultLabel").text = "It's a tie!"
+
 					# other player's turn
 					player *= -1
 					
@@ -69,6 +82,7 @@ func _input(event):
 # no _ before func name cuz its not godot-made
 func new_game():
 	player = 1
+	moves = 0
 	winner = 0
 	# intialize grid
 	grid_data = [
@@ -118,7 +132,7 @@ func check_win():
 		if row_sum == 3 or col_sum == 3 or diagonal_sum == 3 or diagonal2 == 3:
 			winner = 1
 		elif row_sum == -3 or col_sum == -3 or diagonal_sum == -3 or diagonal2 == -3:
-			winner = 2
+			winner = -1
 			
 	return winner
 
