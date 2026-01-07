@@ -1,6 +1,4 @@
-res://game_over_menu.tscn
 res://main.tscn
-res://main.gd
-res://game_over_menu.gd
+res://game_over_menu.tscn
 res://cross.tscn
 res://circle.tscn
