@@ -2,6 +2,7 @@ extends Node
 
 @export var circle_scene : PackedScene
 @export var cross_scene : PackedScene
+@export var coin_scene : PackedScene
 
 # variable declarations
 var player : int
@@ -98,7 +99,7 @@ func new_game():
 	diagonal2 = 0
 	
 	# clear existing markers
-	get_tree().call_group("circles", "queue_free")
+	get_tree().call_group("coins", "queue_free")
 	get_tree().call_group("crosses", "queue_free")
 
 	# create a marker to show starting player's turn
@@ -110,10 +111,10 @@ func new_game():
 func create_marker(player, position, temp = false):
 	# create a marker node and it as a child
 	if player == 1:
-		var circle = circle_scene.instantiate()
-		circle.position = position
-		add_child(circle)
-		if temp: temp_marker = circle
+		var lucky_coin = coin_scene.instantiate()
+		lucky_coin.position = position
+		add_child(lucky_coin)
+		if temp: temp_marker = lucky_coin
 	elif player == -1:
 		var cross = cross_scene.instantiate()
 		cross.position = position

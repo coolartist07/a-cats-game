@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://di5y07fbfmkps"]
+
+[ext_resource type="Texture2D" uid="uid://dxfdjylw684aw" path="res://assets/Lucky_Coin.png" id="1_ui5sf"]
+
+[node name="Sprite2D" type="Sprite2D" groups=["coins"]]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_ui5sf")
