@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dcof72861ggcf"]
+[gd_scene load_steps=10 format=3 uid="uid://dcof72861ggcf"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_ydi1d"]
 [ext_resource type="PackedScene" uid="uid://dd3ea6r2gtaru" path="res://board.tscn" id="2_d3noh"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b63wwp7kcxgrk" path="res://cross.tscn" id="3_manbs"]
 [ext_resource type="PackedScene" uid="uid://di5y07fbfmkps" path="res://lucky_coin.tscn" id="4_0x6jl"]
 [ext_resource type="PackedScene" uid="uid://clholedril3sl" path="res://game_over_menu.tscn" id="5_3wqtg"]
+[ext_resource type="PackedScene" uid="uid://bg3a21vn52hn8" path="res://scratch.tscn" id="5_13ja7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1syas"]
 bg_color = Color(0, 0.666667, 0.803922, 1)
@@ -30,6 +31,7 @@ script = ExtResource("1_ydi1d")
 circle_scene = ExtResource("2_n4i0p")
 cross_scene = ExtResource("3_manbs")
 coin_scene = ExtResource("4_0x6jl")
+scratch_scene = ExtResource("5_13ja7")
 
 [node name="Board" parent="." instance=ExtResource("2_d3noh")]
 position = Vector2(300, 300)

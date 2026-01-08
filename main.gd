@@ -3,6 +3,7 @@ extends Node
 @export var circle_scene : PackedScene
 @export var cross_scene : PackedScene
 @export var coin_scene : PackedScene
+@export var scratch_scene : PackedScene
 
 # variable declarations
 var player : int
@@ -100,7 +101,7 @@ func new_game():
 	
 	# clear existing markers
 	get_tree().call_group("coins", "queue_free")
-	get_tree().call_group("crosses", "queue_free")
+	get_tree().call_group("scratches", "queue_free")
 
 	# create a marker to show starting player's turn
 	create_marker(player, player_panel_pos + Vector2i(cell_size / 2, cell_size / 2), true)
@@ -116,10 +117,10 @@ func create_marker(player, position, temp = false):
 		add_child(lucky_coin)
 		if temp: temp_marker = lucky_coin
 	elif player == -1:
-		var cross = cross_scene.instantiate()
-		cross.position = position
-		add_child(cross)
-		if temp: temp_marker = cross
+		var scratch = scratch_scene.instantiate()
+		scratch.position = position
+		add_child(scratch)
+		if temp: temp_marker = scratch
 
 func check_win():
 	# add up the marker in each row, column, and diagonal
@@ -134,7 +135,7 @@ func check_win():
 			winner = 1
 		elif row_sum == -3 or col_sum == -3 or diagonal_sum == -3 or diagonal2 == -3:
 			winner = -1
-			
+
 	return winner
 
 
