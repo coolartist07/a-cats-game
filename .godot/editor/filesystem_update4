@@ -1,6 +1,7 @@
-res://game_over_menu.tscn
-res://main.tscn
+res://scratch.tscn
 res://main.gd
-res://game_over_menu.gd
+res://main.tscn
+res://game_over_menu.tscn
 res://cross.tscn
 res://circle.tscn
+res://lucky_coin.tscn

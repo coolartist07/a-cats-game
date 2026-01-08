@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg3a21vn52hn8"]
+
+[ext_resource type="Texture2D" uid="uid://dco5b8iig6e0b" path="res://assets/scratch.png" id="1_7sv87"]
+
+[node name="scratch" type="Sprite2D" groups=["scratches"]]
+position = Vector2(7, 10)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_7sv87")
