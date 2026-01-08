@@ -1,7 +1,5 @@
 extends Node
 
-@export var circle_scene : PackedScene
-@export var cross_scene : PackedScene
 @export var coin_scene : PackedScene
 @export var scratch_scene : PackedScene
 

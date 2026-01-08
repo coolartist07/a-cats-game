@@ -1,5 +1,7 @@
-Sprite2D
+Node
 Button
+Control
+Sprite2D
 Label
 Panel
 CanvasLayer
