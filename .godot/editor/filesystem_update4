@@ -4,3 +4,5 @@ res://game_over_menu.tscn
 res://lucky_coin.tscn
 res://scratch.tscn
 res://main_menu.tscn
+res://game.gd
+res://cat_2.tscn

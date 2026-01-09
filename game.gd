@@ -25,7 +25,7 @@ func _ready() -> void:
 	cell_size = board_size / 3
 	
 	# get coordinates of small panel on right side of window
-	player_panel_pos = $PlayerPanel.get_position()
+	player_panel_pos = $NextPlayerPanel.get_position()
 	
 	new_game()
 
@@ -67,7 +67,7 @@ func _input(event):
 					elif moves == 9:
 						get_tree().paused = true
 						$GameOverMenu.show()
-						$GameOverMenu.get_node("ResultLabel").text = "It's a tie!"
+						$GameOverMenu.get_node("ResultLabel").text = "Cat's Game!"
 
 					# other player's turn
 					player *= -1

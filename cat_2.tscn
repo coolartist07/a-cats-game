@@ -1,0 +1,96 @@
+[gd_scene load_steps=22 format=3 uid="uid://du3x1428ksy5t"]
+
+[ext_resource type="Texture2D" uid="uid://bli0c1k1yts0d" path="res://assets/Blink/Blink_001.png" id="1_j1ysy"]
+[ext_resource type="Texture2D" uid="uid://bwflweh2mgjny" path="res://assets/Blink/Blink_002.png" id="2_s0ubf"]
+[ext_resource type="Texture2D" uid="uid://ncv5tpgikwe8" path="res://assets/Blink/Blink_003.png" id="3_d4q32"]
+[ext_resource type="Texture2D" uid="uid://c16sfx3fy0yw2" path="res://assets/Blink/Blink_004.png" id="4_y0jqk"]
+[ext_resource type="Texture2D" uid="uid://blbdmjawafjpx" path="res://assets/Blink/Blink_005.png" id="5_jxjxx"]
+[ext_resource type="Texture2D" uid="uid://dvhvtcjdrvuon" path="res://assets/Blink/Blink_006.png" id="6_vqe51"]
+[ext_resource type="Texture2D" uid="uid://cb2j4moybuk2i" path="res://assets/Blink/Blink_007.png" id="7_jec5c"]
+[ext_resource type="Texture2D" uid="uid://6myyjel55pwy" path="res://assets/Blink/Blink_008.png" id="8_1hmuy"]
+[ext_resource type="Texture2D" uid="uid://bom5rjq7cnwsb" path="res://assets/Blink/Blink_009.png" id="9_gutds"]
+[ext_resource type="Texture2D" uid="uid://bxt4ookeghetc" path="res://assets/Blink/Blink_010.png" id="10_xcilc"]
+[ext_resource type="Texture2D" uid="uid://bqkxiy1n4bcrr" path="res://assets/Blink/Blink_011.png" id="11_0jvxn"]
+[ext_resource type="Texture2D" uid="uid://dho3owbwhktw" path="res://assets/Blink/Blink_012.png" id="12_oqvph"]
+[ext_resource type="Texture2D" uid="uid://bfbruxjpp5de7" path="res://assets/Blink/Blink_013.png" id="13_f8rw7"]
+[ext_resource type="Texture2D" uid="uid://dovqiufww00ys" path="res://assets/Blink/Blink_014.png" id="14_1tcyc"]
+[ext_resource type="Texture2D" uid="uid://dfhrmrfer1kld" path="res://assets/Blink/Blink_015.png" id="15_s1vma"]
+[ext_resource type="Texture2D" uid="uid://ealmvayf36v7" path="res://assets/Blink/Blink_016.png" id="16_rocha"]
+[ext_resource type="Texture2D" uid="uid://xf360imatokj" path="res://assets/Blink/Blink_017.png" id="17_1ujrt"]
+[ext_resource type="Texture2D" uid="uid://bb6xgp0jv8kr4" path="res://assets/Blink/Blink_018.png" id="18_6yowp"]
+[ext_resource type="Texture2D" uid="uid://8kkt5vcy3kqf" path="res://assets/Blink/Blink_019.png" id="19_7nj3r"]
+[ext_resource type="Texture2D" uid="uid://b53h28olbv21g" path="res://assets/Blink/Blink_020.png" id="20_ejtvv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3gcbg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_j1ysy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_s0ubf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_d4q32")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_y0jqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jxjxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vqe51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jec5c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1hmuy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_gutds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xcilc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_0jvxn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_oqvph")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_f8rw7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_1tcyc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_s1vma")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_rocha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_1ujrt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_6yowp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_7nj3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ejtvv")
+}],
+"loop": true,
+"name": &"figaro",
+"speed": 8.0
+}]
+
+[node name="cat2" type="AnimatedSprite2D"]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_3gcbg")
+frame = 14
+frame_progress = 0.498174

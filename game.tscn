@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c50anptber27i"]
+[gd_scene load_steps=10 format=3 uid="uid://c50anptber27i"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_7kqi7"]
 [ext_resource type="PackedScene" uid="uid://dd3ea6r2gtaru" path="res://board.tscn" id="2_ax617"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://di5y07fbfmkps" path="res://lucky_coin.tscn" id="2_mmnem"]
 [ext_resource type="PackedScene" uid="uid://bg3a21vn52hn8" path="res://scratch.tscn" id="3_10mfx"]
 [ext_resource type="PackedScene" uid="uid://clholedril3sl" path="res://game_over_menu.tscn" id="3_dvjp3"]
+[ext_resource type="PackedScene" uid="uid://du3x1428ksy5t" path="res://cat_2.tscn" id="7_cir2m"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1syas"]
 bg_color = Color(0, 0.666667, 0.803922, 1)
@@ -22,7 +23,6 @@ corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
-shadow_size = 5
 shadow_offset = Vector2(5, 5)
 
 [node name="Game" type="Node"]
@@ -48,23 +48,48 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_1syas")
 
 [node name="PlayerLabel" type="Label" parent="."]
-offset_left = 600.0
-offset_top = 120.0
-offset_right = 900.0
-offset_bottom = 187.0
-theme_override_font_sizes/font_size = 46
+offset_left = 599.0
+offset_top = 199.0
+offset_right = 899.0
+offset_bottom = 266.0
+theme_override_font_sizes/font_size = 30
 text = "Next Player: "
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PlayerPanel" type="Panel" parent="."]
+[node name="NextPlayerPanel" type="Panel" parent="."]
+visible = false
 offset_left = 650.0
 offset_top = 200.0
 offset_right = 850.0
 offset_bottom = 400.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_6jn1u")
 
+[node name="Player1Panel" type="Panel" parent="."]
+offset_left = 656.0
+offset_top = 408.0
+offset_right = 833.0
+offset_bottom = 585.0
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_6jn1u")
+
+[node name="Player2Panel" type="Panel" parent="."]
+offset_left = 656.0
+offset_top = 16.0
+offset_right = 833.0
+offset_bottom = 193.0
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_6jn1u")
+
 [node name="GameOverMenu" parent="." instance=ExtResource("3_dvjp3")]
 process_mode = 2
+
+[node name="cat2" parent="." instance=ExtResource("7_cir2m")]
+position = Vector2(744, 105)
+scale = Vector2(0.08, 0.079)
+animation = &"figaro"
+autoplay = "figaro"
+frame = 0
+frame_progress = 0.0
 
 [connection signal="restart" from="GameOverMenu" to="." method="_on_game_over_menu_restart"]
