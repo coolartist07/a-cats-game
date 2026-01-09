@@ -92,5 +92,6 @@ animations = [{
 [node name="cat2" type="AnimatedSprite2D"]
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_3gcbg")
+animation = &"figaro"
 frame = 14
 frame_progress = 0.498174

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c50anptber27i"]
+[gd_scene load_steps=11 format=3 uid="uid://c50anptber27i"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_7kqi7"]
 [ext_resource type="PackedScene" uid="uid://dd3ea6r2gtaru" path="res://board.tscn" id="2_ax617"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://di5y07fbfmkps" path="res://lucky_coin.tscn" id="2_mmnem"]
 [ext_resource type="PackedScene" uid="uid://bg3a21vn52hn8" path="res://scratch.tscn" id="3_10mfx"]
 [ext_resource type="PackedScene" uid="uid://clholedril3sl" path="res://game_over_menu.tscn" id="3_dvjp3"]
+[ext_resource type="Texture2D" uid="uid://bb8dsbrtml3fo" path="res://assets/redboard.png" id="6_ms0un"]
 [ext_resource type="PackedScene" uid="uid://du3x1428ksy5t" path="res://cat_2.tscn" id="7_cir2m"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1syas"]
@@ -31,10 +32,11 @@ coin_scene = ExtResource("2_mmnem")
 scratch_scene = ExtResource("3_10mfx")
 
 [node name="MainMenu" parent="." instance=ExtResource("2_fwu2r")]
-visible = false
 
 [node name="Board" parent="." instance=ExtResource("2_ax617")]
-position = Vector2(300, 300)
+position = Vector2(301.748, 301.748)
+scale = Vector2(0.295168, 0.295168)
+texture = ExtResource("6_ms0un")
 
 [node name="SidePanel" type="Panel" parent="."]
 custom_minimum_size = Vector2(300, 600)
@@ -87,7 +89,6 @@ process_mode = 2
 [node name="cat2" parent="." instance=ExtResource("7_cir2m")]
 position = Vector2(744, 105)
 scale = Vector2(0.08, 0.079)
-animation = &"figaro"
 autoplay = "figaro"
 frame = 0
 frame_progress = 0.0

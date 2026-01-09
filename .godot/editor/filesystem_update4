@@ -1,8 +1,8 @@
+res://lucky_coin.tscn
 res://main.tscn
 res://game.tscn
 res://game_over_menu.tscn
-res://lucky_coin.tscn
-res://scratch.tscn
 res://main_menu.tscn
-res://game.gd
 res://cat_2.tscn
+res://scratch.tscn
+res://game.gd
