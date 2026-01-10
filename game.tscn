@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" path="res://game.gd" id="1_7kqi7"]
 [ext_resource type="PackedScene" uid="uid://dd3ea6r2gtaru" path="res://board.tscn" id="2_ax617"]
-[ext_resource type="PackedScene" uid="uid://c0g48e0sh8rd8" path="res://main_menu.tscn" id="2_fwu2r"]
 [ext_resource type="PackedScene" uid="uid://di5y07fbfmkps" path="res://lucky_coin.tscn" id="2_mmnem"]
 [ext_resource type="PackedScene" uid="uid://bg3a21vn52hn8" path="res://scratch.tscn" id="3_10mfx"]
 [ext_resource type="PackedScene" uid="uid://clholedril3sl" path="res://game_over_menu.tscn" id="3_dvjp3"]
 [ext_resource type="Texture2D" uid="uid://bb8dsbrtml3fo" path="res://assets/redboard.png" id="6_ms0un"]
 [ext_resource type="PackedScene" uid="uid://du3x1428ksy5t" path="res://cat_2.tscn" id="7_cir2m"]
+[ext_resource type="PackedScene" uid="uid://bjrmwa1u0rugo" path="res://cat_1.tscn" id="7_mfy0r"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1syas"]
 bg_color = Color(0, 0.666667, 0.803922, 1)
@@ -30,8 +30,6 @@ shadow_offset = Vector2(5, 5)
 script = ExtResource("1_7kqi7")
 coin_scene = ExtResource("2_mmnem")
 scratch_scene = ExtResource("3_10mfx")
-
-[node name="MainMenu" parent="." instance=ExtResource("2_fwu2r")]
 
 [node name="Board" parent="." instance=ExtResource("2_ax617")]
 position = Vector2(301.748, 301.748)
@@ -85,6 +83,10 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_6jn1u")
 
 [node name="GameOverMenu" parent="." instance=ExtResource("3_dvjp3")]
 process_mode = 2
+
+[node name="Cat1" parent="." instance=ExtResource("7_mfy0r")]
+position = Vector2(743, 495)
+scale = Vector2(0.0825195, 0.0825195)
 
 [node name="cat2" parent="." instance=ExtResource("7_cir2m")]
 position = Vector2(744, 105)
