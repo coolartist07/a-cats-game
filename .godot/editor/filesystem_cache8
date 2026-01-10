@@ -1,28 +1,27 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1767994879
+::res://::1768005877
 board.tscn::PackedScene::7427875682799191278::1767858346::0::1::::<><>::uid://d1yxlf6505bri::::res://assets/grid.png
-cat_2.tscn::PackedScene::8622285988829122559::1767945031::0::1::::<><>::uid://bli0c1k1yts0d::::res://assets/Blink/Blink_001.png<>uid://bwflweh2mgjny::::res://assets/Blink/Blink_002.png<>uid://ncv5tpgikwe8::::res://assets/Blink/Blink_003.png<>uid://c16sfx3fy0yw2::::res://assets/Blink/Blink_004.png<>uid://blbdmjawafjpx::::res://assets/Blink/Blink_005.png<>uid://dvhvtcjdrvuon::::res://assets/Blink/Blink_006.png<>uid://cb2j4moybuk2i::::res://assets/Blink/Blink_007.png<>uid://6myyjel55pwy::::res://assets/Blink/Blink_008.png<>uid://bom5rjq7cnwsb::::res://assets/Blink/Blink_009.png<>uid://bxt4ookeghetc::::res://assets/Blink/Blink_010.png<>uid://bqkxiy1n4bcrr::::res://assets/Blink/Blink_011.png<>uid://dho3owbwhktw::::res://assets/Blink/Blink_012.png<>uid://bfbruxjpp5de7::::res://assets/Blink/Blink_013.png<>uid://dovqiufww00ys::::res://assets/Blink/Blink_014.png<>uid://dfhrmrfer1kld::::res://assets/Blink/Blink_015.png<>uid://ealmvayf36v7::::res://assets/Blink/Blink_016.png<>uid://xf360imatokj::::res://assets/Blink/Blink_017.png<>uid://bb6xgp0jv8kr4::::res://assets/Blink/Blink_018.png<>uid://8kkt5vcy3kqf::::res://assets/Blink/Blink_019.png<>uid://b53h28olbv21g::::res://assets/Blink/Blink_020.png
-game.gd::GDScript::-1::1767944756::0::1::::<>Node<>::
-game.tscn::PackedScene::6930140152952448988::1767945031::0::1::::<><>::res://game.gd<>uid://dd3ea6r2gtaru::::res://board.tscn<>uid://c0g48e0sh8rd8::::res://main_menu.tscn<>uid://di5y07fbfmkps::::res://lucky_coin.tscn<>uid://bg3a21vn52hn8::::res://scratch.tscn<>uid://clholedril3sl::::res://game_over_menu.tscn<>uid://du3x1428ksy5t::::res://cat_2.tscn
+cat_2.tscn::PackedScene::8622285988829122559::1768004704::0::1::::<><>::uid://tr21781pldml::::res://assets/Cat2/Cat2_001.png<>uid://wpf4hskn7l0l::::res://assets/Cat2/Cat2_002.png<>uid://ck35x8xxp7hha::::res://assets/Cat2/Cat2_003.png<>uid://c2ywy0vk21u21::::res://assets/Cat2/Cat2_004.png<>uid://tuyjysyjmr4::::res://assets/Cat2/Cat2_005.png<>uid://bv23sdnqiami3::::res://assets/Cat2/Cat2_006.png<>uid://c6jubnvsovjdk::::res://assets/Cat2/Cat2_007.png<>uid://d1x0rijxejg7j::::res://assets/Cat2/Cat2_008.png<>uid://ctdt4a2tbopxt::::res://assets/Cat2/Cat2_009.png<>uid://plg6xi13sqc7::::res://assets/Cat2/Cat2_010.png<>uid://co8bxqprs18wv::::res://assets/Cat2/Cat2_011.png<>uid://sf3gamxs4r3x::::res://assets/Cat2/Cat2_012.png<>uid://ddmdgcgo0g0qg::::res://assets/Cat2/Cat2_013.png<>uid://6qxw6i2ub8b::::res://assets/Cat2/Cat2_014.png<>uid://d08e8k23so8b0::::res://assets/Cat2/Cat2_015.png<>uid://hk1kpaaj1hwu::::res://assets/Cat2/Cat2_016.png<>uid://bbfep6abgfxj3::::res://assets/Cat2/Cat2_017.png<>uid://cwjo5ej745nxm::::res://assets/Cat2/Cat2_018.png<>uid://bukdn7y0uh22y::::res://assets/Cat2/Cat2_019.png<>uid://bknukbcxwu74u::::res://assets/Cat2/Cat2_020.png
+game.gd::GDScript::-1::1767995962::0::1::::<>Node<>::
+game.tscn::PackedScene::6930140152952448988::1768005868::0::1::::<><>::res://game.gd<>uid://dd3ea6r2gtaru::::res://board.tscn<>uid://c0g48e0sh8rd8::::res://main_menu.tscn<>uid://di5y07fbfmkps::::res://lucky_coin.tscn<>uid://bg3a21vn52hn8::::res://scratch.tscn<>uid://clholedril3sl::::res://game_over_menu.tscn<>uid://bb8dsbrtml3fo::::res://assets/redboard.png<>uid://du3x1428ksy5t::::res://cat_2.tscn
 game_over_menu.gd::GDScript::-1::1767921881::0::1::::<>CanvasLayer<>::
-game_over_menu.tscn::PackedScene::5560239188826033175::1767945031::0::1::::<><>::res://game_over_menu.gd
+game_over_menu.tscn::PackedScene::5560239188826033175::1768005868::0::1::::<><>::res://game_over_menu.gd
 icon.svg::CompressedTexture2D::5333542597488930863::1767858346::1767858424::1::::<><>::
-lucky_coin.tscn::PackedScene::7784207674003200584::1767941011::0::1::::<><>::uid://dxfdjylw684aw::::res://assets/Lucky_Coin.png
+lucky_coin.tscn::PackedScene::7784207674003200584::1768004704::0::1::::<><>::uid://dodmwtrero8xd::::res://assets/Lucky_Coin2.png
 main.gd::GDScript::-1::1767921833::0::1::::<>Node<>::
-main.tscn::PackedScene::4843731893953216551::1767945031::0::1::::<><>::uid://c0g48e0sh8rd8::::res://main_menu.tscn
+main.tscn::PackedScene::4843731893953216551::1768005868::0::1::::<><>::uid://c0g48e0sh8rd8::::res://main_menu.tscn
 main_menu.gd::GDScript::-1::1767921881::0::1::::<>Node2D<>::
-main_menu.tscn::PackedScene::6541768698392479171::1767945031::0::1::::<><>::res://main_menu.gd<>uid://bferchwfpdrvf::::res://assets/startbutton1.png<>uid://dffcck51m6au3::::res://assets/startbutton2.png<>uid://d0t71tcxjuh5q::::res://assets/quitbutton1.png<>uid://ct5mqqmjv1nsq::::res://assets/quitbutton2.png
+main_menu.tscn::PackedScene::6541768698392479171::1768005868::0::1::::<><>::res://main_menu.gd<>uid://bferchwfpdrvf::::res://assets/startbutton1.png<>uid://dffcck51m6au3::::res://assets/startbutton2.png<>uid://d0t71tcxjuh5q::::res://assets/quitbutton1.png<>uid://ct5mqqmjv1nsq::::res://assets/quitbutton2.png
 README.md::TextFile::-1::1767858346::0::1::::<><>::
-scratch.tscn::PackedScene::2865405937750218127::1767941011::0::1::::<><>::uid://dco5b8iig6e0b::::res://assets/scratch.png
-::res://assets/::1767994879
+loading_screen.tscn::PackedScene::2188969385129075639::1768005868::0::1::::<><>::uid://tipnm72r641g::::res://assets/Loading/Untitled_Artwork 4.png<>uid://uv0jk578y07::::res://assets/Loading/Untitled_Artwork 5.png<>uid://cwpqwv35nlft3::::res://assets/Loading/Untitled_Artwork 6.png<>uid://0swyb2r0q45j::::res://assets/Loading/Untitled_Artwork 7.png
+scratch.tscn::PackedScene::2865405937750218127::1768004704::0::1::::<><>::uid://bsrprjd4n1vnb::::res://assets/scratch2.png
+::res://assets/::1768005479
 grid.png::CompressedTexture2D::9035133498235501902::1767858346::1767858424::1::::<><>::
 Lucky_Coin2.png::CompressedTexture2D::8148867911063417557::1767994791::1767994889::1::::<><>::
-Lucky_Coin.png::CompressedTexture2D::8784126845243378690::1767921595::1767921704::1::::<><>::
 quitbutton1.png::CompressedTexture2D::8955196695858401208::1767922746::1767922875::1::::<><>::
 quitbutton2.png::CompressedTexture2D::6169118765095561320::1767922781::1767922875::1::::<><>::
 redboard.png::CompressedTexture2D::2524948368148492768::1767990194::1767994653::1::::<><>::
 scratch2.png::CompressedTexture2D::3685855883065191183::1767990259::1767994653::1::::<><>::
-scratch.png::CompressedTexture2D::7330366068490819003::1767921595::1767921704::1::::<><>::
 startbutton1.png::CompressedTexture2D::2746658575260850363::1767922102::1767922221::1::::<><>::
 startbutton2.png::CompressedTexture2D::7520653736389316796::1767922130::1767922221::1::::<><>::
 ::res://assets/Blink/::1767943119
@@ -46,3 +45,30 @@ Blink_017.png::CompressedTexture2D::1626422053841733805::1767816736::1767943107:
 Blink_018.png::CompressedTexture2D::2522013270212698175::1767816736::1767943107::1::::<><>::
 Blink_019.png::CompressedTexture2D::2337518325872976685::1767816736::1767943107::1::::<><>::
 Blink_020.png::CompressedTexture2D::4550363560732343806::1767816736::1767943107::1::::<><>::
+::res://assets/Cat2/::1768004663
+Cat2_001.png::CompressedTexture2D::1370369973315405943::1767990816::1768004659::1::::<><>::
+Cat2_002.png::CompressedTexture2D::1575475995277611801::1767990816::1768004658::1::::<><>::
+Cat2_003.png::CompressedTexture2D::5534396733790388378::1767990816::1768004657::1::::<><>::
+Cat2_004.png::CompressedTexture2D::6718865190621218432::1767990816::1768004657::1::::<><>::
+Cat2_005.png::CompressedTexture2D::40480886871917719::1767990816::1768004657::1::::<><>::
+Cat2_006.png::CompressedTexture2D::3917856997929323676::1767990816::1768004656::1::::<><>::
+Cat2_007.png::CompressedTexture2D::6968491761682805020::1767990816::1768004657::1::::<><>::
+Cat2_008.png::CompressedTexture2D::9033201392467827593::1767990816::1768004657::1::::<><>::
+Cat2_009.png::CompressedTexture2D::6113827983231698557::1767990816::1768004655::1::::<><>::
+Cat2_010.png::CompressedTexture2D::1075961693047746996::1767990816::1768004655::1::::<><>::
+Cat2_011.png::CompressedTexture2D::5823712298798392789::1767990816::1768004655::1::::<><>::
+Cat2_012.png::CompressedTexture2D::1275431884423654395::1767990816::1768004655::1::::<><>::
+Cat2_013.png::CompressedTexture2D::7394794095769142794::1767990816::1768004655::1::::<><>::
+Cat2_014.png::CompressedTexture2D::65009459322921975::1767990816::1768004655::1::::<><>::
+Cat2_015.png::CompressedTexture2D::8982409975324067855::1767990816::1768004653::1::::<><>::
+Cat2_016.png::CompressedTexture2D::513562970621111420::1767990816::1768004653::1::::<><>::
+Cat2_017.png::CompressedTexture2D::2467202699258602962::1767990816::1768004653::1::::<><>::
+Cat2_018.png::CompressedTexture2D::6336479164415852494::1767990816::1768004653::1::::<><>::
+Cat2_019.png::CompressedTexture2D::3811048419278839730::1767990816::1768004653::1::::<><>::
+Cat2_020.png::CompressedTexture2D::3116378285358777422::1767990816::1768004653::1::::<><>::
+::res://assets/Loading/::1768005479
+Untitled_Artwork 3.png::CompressedTexture2D::2194800001663724420::1768005294::1768005473::1::::<><>::
+Untitled_Artwork 4.png::CompressedTexture2D::1351037702332024150::1768005313::1768005473::1::::<><>::
+Untitled_Artwork 5.png::CompressedTexture2D::42607746342260250::1768005361::1768005473::1::::<><>::
+Untitled_Artwork 6.png::CompressedTexture2D::6348973500709732894::1768005379::1768005473::1::::<><>::
+Untitled_Artwork 7.png::CompressedTexture2D::1793258618458008681::1768005391::1768005473::1::::<><>::

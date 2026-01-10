@@ -1,8 +1,8 @@
-AnimatedSprite2D
 Control
+CanvasLayer
+Panel
+AnimatedSprite2D
 TextureButton
 Sprite2D
 Button
 Label
-Panel
-CanvasLayer

@@ -6,3 +6,7 @@ res://main_menu.tscn
 res://cat_2.tscn
 res://scratch.tscn
 res://game.gd
+res://loading_screen.tscn
+res://loading_cats.tscn
+res://main_menu.gd
+res://loading_screen.gd

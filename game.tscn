@@ -89,7 +89,6 @@ process_mode = 2
 [node name="cat2" parent="." instance=ExtResource("7_cir2m")]
 position = Vector2(744, 105)
 scale = Vector2(0.08, 0.079)
-autoplay = "figaro"
 frame = 0
 frame_progress = 0.0
 

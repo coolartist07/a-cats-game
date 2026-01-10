@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://6gmag5joqwkl"]
+
+[ext_resource type="Texture2D" uid="uid://tipnm72r641g" path="res://assets/Loading/Untitled_Artwork 4.png" id="1_krx56"]
+[ext_resource type="Texture2D" uid="uid://uv0jk578y07" path="res://assets/Loading/Untitled_Artwork 5.png" id="2_c18xa"]
+[ext_resource type="Texture2D" uid="uid://cwpqwv35nlft3" path="res://assets/Loading/Untitled_Artwork 6.png" id="3_xk7u8"]
+[ext_resource type="Texture2D" uid="uid://0swyb2r0q45j" path="res://assets/Loading/Untitled_Artwork 7.png" id="4_iq4pv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qh0br"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_krx56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_c18xa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xk7u8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_iq4pv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_iq4pv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="LoadingCats" type="AnimatedSprite2D"]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_qh0br")
+autoplay = "default"
+frame_progress = 0.506528
