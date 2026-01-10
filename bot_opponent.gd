@@ -60,7 +60,6 @@ func _input(event):
 						temp_marker.queue_free() # hides the previous mark
 						create_marker(player, player_panel_pos + Vector2i(cell_size / 2, cell_size / 2), true)
 						print(grid_data)
-						print(player)
 
 # no _ before func name cuz its not godot-handled
 func new_game():
@@ -142,25 +141,26 @@ func check_game_over():
 
 func bot_turn():
 	bot_get_cell()
-	player *= -1
 	
 	# place the bot's marker / offset mark by half a cell
-	#create_marker(player, grid_pos * cell_size + Vector2i(cell_size / 2, cell_size / 2))
-	
+	create_marker(player, grid_pos * cell_size + Vector2i(cell_size / 2, cell_size / 2))
+	player *= -1
 
 func bot_get_cell():
-	var random_cell = grid_data[randi() % grid_data.size()][randi() % grid_data.size()]
-	print(random_cell)
-	#while random_cell == 1 or random_cell == -1:
-		## if cell is taken, find another random cell
-		#random_cell = grid_data[randi() % grid_data.size()][randi() % grid_data.size()]
+	# randomly choose grid position of x and y coordinate
+	grid_pos.x = randi() % grid_data.size()
+	grid_pos.y = randi() % grid_data.size()
+
+	while grid_data[grid_pos.y][grid_pos.x] == 1 or grid_data[grid_pos.y][grid_pos.x] == -1:
+		# if cell is taken, find another random cell
+			grid_pos.x = randi() % grid_data.size()
+			grid_pos.y = randi() % grid_data.size()
 		#
-		## increment moves
-		#moves += 1
-		#
-		#grid_pos = Vector2i(event.position / cell_size)
-		#
-		#grid_data[randi() % grid_data.size()][randi() % grid_data.size()] = player
+	print(grid_pos)
+	
+	#increment moves
+	moves += 1
+	grid_data[grid_pos.y][grid_pos.x] = player
 		
 
 func _on_game_over_menu_restart() -> void:

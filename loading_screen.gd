@@ -6,6 +6,7 @@ var scene_load_status = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	# use signals to know which button was pressed for which event
 	scene_name = "res://bot_opponent.tscn"
 	ResourceLoader.load_threaded_request(scene_name)
 
