@@ -1,0 +1,115 @@
+[gd_scene load_steps=12 format=3 uid="uid://c4o6y8uia7qqj"]
+
+[ext_resource type="Script" path="res://bot_opponent.gd" id="1_yhr68"]
+[ext_resource type="PackedScene" uid="uid://dd3ea6r2gtaru" path="res://board.tscn" id="2_8n7s7"]
+[ext_resource type="PackedScene" uid="uid://di5y07fbfmkps" path="res://lucky_coin.tscn" id="2_164kh"]
+[ext_resource type="PackedScene" uid="uid://clholedril3sl" path="res://game_over_menu.tscn" id="3_2y3kf"]
+[ext_resource type="PackedScene" uid="uid://bg3a21vn52hn8" path="res://scratch.tscn" id="3_nufhb"]
+[ext_resource type="PackedScene" uid="uid://du3x1428ksy5t" path="res://cat_2.tscn" id="4_ufn6v"]
+[ext_resource type="Texture2D" uid="uid://bb8dsbrtml3fo" path="res://assets/redboard.png" id="7_ibues"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wgexx"]
+bg_color = Color(0, 0.666667, 0.803922, 1)
+border_width_left = 5
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kxeqt"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ol1nf"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xepo5"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_offset = Vector2(5, 5)
+
+[node name="Bot_Opponent" type="Node"]
+script = ExtResource("1_yhr68")
+coin_scene = ExtResource("2_164kh")
+scratch_scene = ExtResource("3_nufhb")
+
+[node name="Board" parent="." instance=ExtResource("2_8n7s7")]
+position = Vector2(301.748, 301.748)
+scale = Vector2(0.295168, 0.295168)
+texture = ExtResource("7_ibues")
+
+[node name="SidePanel" type="Panel" parent="."]
+custom_minimum_size = Vector2(300, 600)
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -300.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wgexx")
+
+[node name="PlayerLabel" type="Label" parent="."]
+offset_left = 599.0
+offset_top = 199.0
+offset_right = 899.0
+offset_bottom = 266.0
+theme_override_font_sizes/font_size = 30
+text = "Next Player: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NextPlayerPanel" type="Panel" parent="."]
+visible = false
+offset_left = 650.0
+offset_top = 200.0
+offset_right = 850.0
+offset_bottom = 400.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kxeqt")
+
+[node name="Player1Panel" type="Panel" parent="."]
+offset_left = 656.0
+offset_top = 408.0
+offset_right = 833.0
+offset_bottom = 585.0
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_ol1nf")
+
+[node name="Player2Panel" type="Panel" parent="."]
+offset_left = 656.0
+offset_top = 16.0
+offset_right = 833.0
+offset_bottom = 193.0
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_xepo5")
+
+[node name="GameOverMenu" parent="." instance=ExtResource("3_2y3kf")]
+
+[node name="cat2" parent="." instance=ExtResource("4_ufn6v")]
+position = Vector2(744, 105)
+scale = Vector2(0.08, 0.079)
+frame = 0
+frame_progress = 0.0
+
+[connection signal="restart" from="GameOverMenu" to="." method="_on_game_over_menu_restart"]
