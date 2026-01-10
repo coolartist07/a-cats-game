@@ -31,36 +31,36 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if player == -1:
+		bot_turn()
 
 func _input(event):
-	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			# check if mouse is on game board
-			if event.position.x < board_size:
-				# convert mouse position into grid location
-				grid_pos = Vector2i(event.position / cell_size)
-				
-				# check if cell is empty
-				if grid_data[grid_pos.y][grid_pos.x] == 0:
-					moves += 1
-					# [column][row]
-					grid_data[grid_pos.y][grid_pos.x] = player
+	if player == 1:
+		if event is InputEventMouseButton:
+			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+				# check if mouse is on game board
+				if event.position.x < board_size:
+					# convert mouse position into grid location
+					grid_pos = Vector2i(event.position / cell_size)
 					
-					# place that player's marker / offset mark by half a cell
-					create_marker(player, grid_pos * cell_size + Vector2i(cell_size / 2, cell_size / 2))
-					
-					check_game_over()
+					# check if cell is empty
+					if grid_data[grid_pos.y][grid_pos.x] == 0:
+						moves += 1
+						# [column][row]
+						grid_data[grid_pos.y][grid_pos.x] = player
+						
+						# place that player's marker / offset mark by half a cell
+						create_marker(player, grid_pos * cell_size + Vector2i(cell_size / 2, cell_size / 2))
+	
+						check_game_over()
 
-					# other player's turn
-					player *= -1
-					
-					# update the panel marker
-					temp_marker.queue_free() # hides the previous mark
-					create_marker(player, player_panel_pos + Vector2i(cell_size / 2, cell_size / 2), true)
-
-					
-					print(grid_data)
+						# other player's turn
+						player *= -1
+						# update the panel marker
+						temp_marker.queue_free() # hides the previous mark
+						create_marker(player, player_panel_pos + Vector2i(cell_size / 2, cell_size / 2), true)
+						print(grid_data)
+						print(player)
 
 # no _ before func name cuz its not godot-handled
 func new_game():
@@ -122,28 +122,46 @@ func check_win():
 
 func check_game_over():
 	if check_win() != 0:
-	# if there's a winner, game won't continue
+		# if there's a winner, game won't continue
 		get_tree().paused = true
-						
+
 	# show game over menu
 		$GameOverMenu.show()
-					
+
 		if winner == 1:
 			$GameOverMenu.get_node("ResultLabel").text = "Player 1 Wins!"
-							
+
 		elif winner == -1:
 			$GameOverMenu.get_node("ResultLabel").text = "Player 2 Wins!"
-								
+
 		# check if the board is filled (tie game)
 		elif moves == 9:
 			get_tree().paused = true
 			$GameOverMenu.show()
 			$GameOverMenu.get_node("ResultLabel").text = "Cat's Game!"
-		
 
-#func bot_get_cell():
+func bot_turn():
+	bot_get_cell()
+	player *= -1
+	
+	# place the bot's marker / offset mark by half a cell
+	#create_marker(player, grid_pos * cell_size + Vector2i(cell_size / 2, cell_size / 2))
 	
 
+func bot_get_cell():
+	var random_cell = grid_data[randi() % grid_data.size()][randi() % grid_data.size()]
+	print(random_cell)
+	#while random_cell == 1 or random_cell == -1:
+		## if cell is taken, find another random cell
+		#random_cell = grid_data[randi() % grid_data.size()][randi() % grid_data.size()]
+		#
+		## increment moves
+		#moves += 1
+		#
+		#grid_pos = Vector2i(event.position / cell_size)
+		#
+		#grid_data[randi() % grid_data.size()][randi() % grid_data.size()] = player
+		
 
 func _on_game_over_menu_restart() -> void:
 	new_game()

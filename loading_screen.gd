@@ -6,7 +6,7 @@ var scene_load_status = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	scene_name = "res://game.tscn"
+	scene_name = "res://bot_opponent.tscn"
 	ResourceLoader.load_threaded_request(scene_name)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
