@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://c0g48e0sh8rd8"]
+[gd_scene load_steps=7 format=3 uid="uid://c0g48e0sh8rd8"]
 
-[ext_resource type="Script" path="res://main_menu.gd" id="1_b4kwu"]
+[ext_resource type="Script" uid="uid://cfb7v2lkdb0rh" path="res://main_menu.gd" id="1_b4kwu"]
+[ext_resource type="Texture2D" uid="uid://b7sm6du3nljvq" path="res://assets/main_menu_bg.PNG" id="2_nlkkf"]
 [ext_resource type="Texture2D" uid="uid://bferchwfpdrvf" path="res://assets/startbutton1.png" id="2_oh4iu"]
 [ext_resource type="Texture2D" uid="uid://dffcck51m6au3" path="res://assets/startbutton2.png" id="3_68s1t"]
 [ext_resource type="Texture2D" uid="uid://d0t71tcxjuh5q" path="res://assets/quitbutton1.png" id="4_bgpcw"]
@@ -8,6 +9,11 @@
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_b4kwu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(448, 300)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_nlkkf")
 
 [node name="ButtonManager" type="Control" parent="."]
 layout_mode = 3
@@ -22,10 +28,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 309.0
-offset_top = 141.0
-offset_right = 2109.0
-offset_bottom = 1341.0
+offset_left = 600.0
+offset_top = 153.0
+offset_right = 2400.0
+offset_bottom = 1353.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.15, 0.15)
@@ -39,10 +45,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 335.0
-offset_top = 248.0
-offset_right = 2135.0
-offset_bottom = 1448.0
+offset_left = 611.0
+offset_top = 256.0
+offset_right = 2411.0
+offset_bottom = 1456.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.13, 0.13)

@@ -1,9 +1,9 @@
+Sprite2D
+CanvasLayer
 Button
 AnimatedSprite2D
 Node
 Control
-CanvasLayer
 Panel
 TextureButton
-Sprite2D
 Label

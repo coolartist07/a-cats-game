@@ -1,6 +1,1 @@
-res://game_over_menu.gd
-res://game_over_menu.tscn
-res://bot_opponent.tscn
-res://loading_screen.tscn
-res://loading_screen.gd
 res://bot_opponent.gd

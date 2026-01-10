@@ -50,24 +50,7 @@ func _input(event):
 					# place that player's marker / offset mark by half a cell
 					create_marker(player, grid_pos * cell_size + Vector2i(cell_size / 2, cell_size / 2))
 					
-					if check_win() != 0:
-						# if there's a winner, game won't continue
-						get_tree().paused = true
-						
-						# show game over menu
-						$GameOverMenu.show()
-					
-						if winner == 1:
-							$GameOverMenu.get_node("ResultLabel").text = "Player 1 Wins!"
-							
-						elif winner == -1:
-							$GameOverMenu.get_node("ResultLabel").text = "Player 2 Wins!"
-							
-					# check if the board is filled (tie game)
-					elif moves == 9:
-						get_tree().paused = true
-						$GameOverMenu.show()
-						$GameOverMenu.get_node("ResultLabel").text = "Cat's Game!"
+					check_game_over()
 
 					# other player's turn
 					player *= -1
@@ -137,6 +120,29 @@ func check_win():
 	return winner
 
 
+func check_game_over():
+	if check_win() != 0:
+	# if there's a winner, game won't continue
+		get_tree().paused = true
+						
+	# show game over menu
+		$GameOverMenu.show()
+					
+		if winner == 1:
+			$GameOverMenu.get_node("ResultLabel").text = "Player 1 Wins!"
+							
+		elif winner == -1:
+			$GameOverMenu.get_node("ResultLabel").text = "Player 2 Wins!"
+								
+		# check if the board is filled (tie game)
+		elif moves == 9:
+			get_tree().paused = true
+			$GameOverMenu.show()
+			$GameOverMenu.get_node("ResultLabel").text = "Cat's Game!"
+		
+
+#func bot_get_cell():
+	
 
 
 func _on_game_over_menu_restart() -> void:
