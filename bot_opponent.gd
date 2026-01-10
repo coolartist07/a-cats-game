@@ -131,11 +131,11 @@ func check_game_over():
 		elif winner == -1:
 			$GameOverMenu.get_node("ResultLabel").text = "Player 2 Wins!"
 
-		# check if the board is filled (tie game)
-		elif moves == 9:
-			get_tree().paused = true
-			$GameOverMenu.show()
-			$GameOverMenu.get_node("ResultLabel").text = "Cat's Game!"
+	# check if the board is filled (tie game)
+	elif moves == 9:
+		get_tree().paused = true
+		$GameOverMenu.show()
+		$GameOverMenu.get_node("ResultLabel").text = "Cat's Game!"
 
 func bot_turn():
 	bot_get_cell()
