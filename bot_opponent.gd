@@ -56,9 +56,7 @@ func _input(event):
 
 						# other player's turn
 						player *= -1
-						# update the panel marker
-						temp_marker.queue_free() # hides the previous mark
-						create_marker(player, player_panel_pos + Vector2i(cell_size / 2, cell_size / 2), true)
+
 						print(grid_data)
 
 # no _ before func name cuz its not godot-handled
@@ -144,8 +142,13 @@ func bot_turn():
 	
 	# place the bot's marker / offset mark by half a cell
 	create_marker(player, grid_pos * cell_size + Vector2i(cell_size / 2, cell_size / 2))
+	check_game_over()
+
+	# other player's turn
 	player *= -1
 
+	print(grid_data)
+	
 func bot_get_cell():
 	# randomly choose grid position of x and y coordinate
 	grid_pos.x = randi() % grid_data.size()
