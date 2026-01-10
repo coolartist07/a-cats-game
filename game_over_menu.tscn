@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://clholedril3sl"]
 
-[ext_resource type="Script" path="res://game_over_menu.gd" id="1_ek37m"]
+[ext_resource type="Script" uid="uid://x714w20t83tu" path="res://game_over_menu.gd" id="1_ek37m"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ra2bs"]
 bg_color = Color(0, 0.239216, 0.698039, 1)
@@ -50,4 +50,13 @@ offset_bottom = 319.0
 theme_override_font_sizes/font_size = 40
 text = "Play Again?"
 
+[node name="QuitButton" type="Button" parent="."]
+offset_left = 313.0
+offset_top = 334.0
+offset_right = 632.0
+offset_bottom = 398.0
+theme_override_font_sizes/font_size = 40
+text = "Quit"
+
 [connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
