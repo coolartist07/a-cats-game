@@ -1,1 +1,4 @@
 res://bot_opponent.gd
+res://bot_opponent.tscn
+res://loading_screen.gd
+res://loading_screen.tscn
