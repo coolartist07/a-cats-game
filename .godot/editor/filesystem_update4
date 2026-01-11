@@ -2,3 +2,4 @@ res://bot_opponent.gd
 res://bot_opponent.tscn
 res://game_over_menu.tscn
 res://main_menu.tscn
+res://game.tscn

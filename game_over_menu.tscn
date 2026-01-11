@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://clholedril3sl"]
+[gd_scene load_steps=11 format=3 uid="uid://clholedril3sl"]
 
 [ext_resource type="Script" uid="uid://x714w20t83tu" path="res://game_over_menu.gd" id="1_ek37m"]
 [ext_resource type="Texture2D" uid="uid://bd0xq2w6luy5p" path="res://assets/replay1.png" id="2_isdfh"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cl445da03uk6y" path="res://assets/home1.png" id="4_bayw5"]
 [ext_resource type="Texture2D" uid="uid://dksdlw0uiqodn" path="res://assets/home2.png" id="5_20gq0"]
 [ext_resource type="Texture2D" uid="uid://ct5mqqmjv1nsq" path="res://assets/quitbutton2.png" id="5_bayw5"]
+[ext_resource type="PackedScene" uid="uid://bjrmwa1u0rugo" path="res://cat_1.tscn" id="8_bayw5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ra2bs"]
 bg_color = Color(0, 0.239216, 0.698039, 1)
@@ -15,6 +16,18 @@ border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
 border_color = Color(0.976471, 0.576471, 0.8, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_20gq0"]
+bg_color = Color(0.9490196, 0.68235296, 0.11764706, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_offset = Vector2(5, 5)
 
 [node name="GameOverMenu" type="CanvasLayer"]
 script = ExtResource("1_ek37m")
@@ -34,12 +47,11 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_ra2bs")
 
 [node name="ResultLabel" type="Label" parent="."]
 offset_left = 584.0
-offset_top = 72.0
+offset_top = -8.0
 offset_right = 921.0
-offset_bottom = 201.0
-theme_override_font_sizes/font_size = 45
-text = "Player 1 
-Wins!"
+offset_bottom = 121.0
+theme_override_font_sizes/font_size = 40
+text = "Player 1 Wins!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -69,6 +81,19 @@ offset_bottom = 1688.0
 scale = Vector2(0.08, 0.08)
 texture_normal = ExtResource("4_a3fl3")
 texture_hover = ExtResource("5_bayw5")
+
+[node name="WinnerPanel" type="Panel" parent="."]
+offset_left = 656.0
+offset_top = 104.0
+offset_right = 848.0
+offset_bottom = 288.0
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_20gq0")
+
+[node name="Cat1" parent="." instance=ExtResource("8_bayw5")]
+visible = false
+position = Vector2(752, 192)
+scale = Vector2(0.08515628, 0.08515628)
 
 [connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="HomeButton" to="." method="_on_home_button_pressed"]
