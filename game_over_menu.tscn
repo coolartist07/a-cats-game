@@ -1,62 +1,75 @@
-[gd_scene load_steps=3 format=3 uid="uid://clholedril3sl"]
+[gd_scene load_steps=9 format=3 uid="uid://clholedril3sl"]
 
 [ext_resource type="Script" uid="uid://x714w20t83tu" path="res://game_over_menu.gd" id="1_ek37m"]
+[ext_resource type="Texture2D" uid="uid://bd0xq2w6luy5p" path="res://assets/replay1.png" id="2_isdfh"]
+[ext_resource type="Texture2D" uid="uid://bcs2s62uy6rte" path="res://assets/replay2.png" id="3_17l84"]
+[ext_resource type="Texture2D" uid="uid://d0t71tcxjuh5q" path="res://assets/quitbutton1.png" id="4_a3fl3"]
+[ext_resource type="Texture2D" uid="uid://cl445da03uk6y" path="res://assets/home1.png" id="4_bayw5"]
+[ext_resource type="Texture2D" uid="uid://dksdlw0uiqodn" path="res://assets/home2.png" id="5_20gq0"]
+[ext_resource type="Texture2D" uid="uid://ct5mqqmjv1nsq" path="res://assets/quitbutton2.png" id="5_bayw5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ra2bs"]
 bg_color = Color(0, 0.239216, 0.698039, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
 border_color = Color(0.976471, 0.576471, 0.8, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
 
 [node name="GameOverMenu" type="CanvasLayer"]
 script = ExtResource("1_ek37m")
 
 [node name="GameOverPanel" type="Panel" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 6
+anchor_left = 1.0
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -282.0
-offset_top = -188.0
-offset_right = 118.0
-offset_bottom = 62.0
-grow_horizontal = 2
+offset_left = -300.0
+offset_top = -300.0
+offset_bottom = 300.0
+grow_horizontal = 0
 grow_vertical = 2
-scale = Vector2(1.5, 1.5)
 theme_override_styles/panel = SubResource("StyleBoxFlat_ra2bs")
 
 [node name="ResultLabel" type="Label" parent="."]
-offset_left = 304.0
-offset_top = 144.0
-offset_right = 641.0
-offset_bottom = 213.0
-theme_override_font_sizes/font_size = 50
-text = "Player 1 Wins!"
+offset_left = 584.0
+offset_top = 72.0
+offset_right = 921.0
+offset_bottom = 201.0
+theme_override_font_sizes/font_size = 45
+text = "Player 1 
+Wins!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="RestartButton" type="Button" parent="."]
-offset_left = 312.0
-offset_top = 256.0
-offset_right = 640.0
-offset_bottom = 319.0
-theme_override_font_sizes/font_size = 40
-text = "Play Again?"
+[node name="RestartButton" type="TextureButton" parent="."]
+offset_left = 648.0
+offset_top = 288.0
+offset_right = 2448.0
+offset_bottom = 1488.0
+scale = Vector2(0.12, 0.12)
+texture_normal = ExtResource("2_isdfh")
+texture_hover = ExtResource("3_17l84")
 
-[node name="QuitButton" type="Button" parent="."]
-offset_left = 313.0
-offset_top = 334.0
-offset_right = 632.0
-offset_bottom = 398.0
-theme_override_font_sizes/font_size = 40
-text = "Quit"
+[node name="HomeButton" type="TextureButton" parent="."]
+offset_left = 648.0
+offset_top = 360.0
+offset_right = 2448.0
+offset_bottom = 1560.0
+scale = Vector2(0.11, 0.11)
+texture_normal = ExtResource("4_bayw5")
+texture_hover = ExtResource("5_20gq0")
+
+[node name="QuitButton" type="TextureButton" parent="."]
+offset_left = 671.99994
+offset_top = 448.0
+offset_right = 2472.0
+offset_bottom = 1648.0
+scale = Vector2(0.08, 0.08)
+texture_normal = ExtResource("4_a3fl3")
+texture_hover = ExtResource("5_bayw5")
 
 [connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="HomeButton" to="." method="_on_home_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
