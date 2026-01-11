@@ -55,5 +55,14 @@ scale = Vector2(0.13, 0.13)
 texture_normal = ExtResource("4_bgpcw")
 texture_hover = ExtResource("5_iea5g")
 
+[node name="TwoPlayerMode" type="Button" parent="ButtonManager"]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 473.0
+offset_right = 415.0
+offset_bottom = 569.0
+text = "2-Player Mode"
+
 [connection signal="pressed" from="ButtonManager/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="ButtonManager/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="ButtonManager/TwoPlayerMode" to="." method="_on_two_player_mode_pressed"]

@@ -2,6 +2,7 @@ extends Node
 
 @export var coin_scene : PackedScene
 @export var scratch_scene : PackedScene
+@onready var coin_sfx: AudioStreamPlayer = $coin_sfx
 
 # variable declarations
 var player : int
@@ -21,8 +22,8 @@ var diagonal2 : int
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	board_size = $Board.texture.get_width()
-	# divide board size by 10.24 to get size of individual cell (texture is big)
-	cell_size = board_size / 10.24
+	# divide board size by 3 to get size of individual cell
+	cell_size = board_size / 3
 	
 	# get coordinates of small panel on right side of window
 	player_panel_pos = $NextPlayerPanel.get_position()
@@ -51,8 +52,9 @@ func _input(event):
 						
 						# place that player's marker / offset mark by half a cell
 						create_marker(player, grid_pos * cell_size + Vector2i(cell_size / 2, cell_size / 2))
-	
+						
 						check_game_over()
+						coin_sfx.play()
 
 						# other player's turn
 						player *= -1
