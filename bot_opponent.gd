@@ -57,10 +57,14 @@ func _input(event):
 						check_game_over()
 						coin_sfx.play()
 						
+						# prevents player from putting down more marks while timer is running
+						player = 0
+						
 						# wait before running next line to show bot is "thinking"
-						await get_tree().create_timer(0.4).timeout
+						await get_tree().create_timer(0.35).timeout
 						
 						# other player's turn
+						player = 1
 						player *= -1
 
 						print(grid_data)

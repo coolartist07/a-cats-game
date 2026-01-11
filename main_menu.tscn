@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c0g48e0sh8rd8"]
+[gd_scene load_steps=9 format=3 uid="uid://c0g48e0sh8rd8"]
 
 [ext_resource type="Script" uid="uid://cfb7v2lkdb0rh" path="res://main_menu.gd" id="1_b4kwu"]
 [ext_resource type="Texture2D" uid="uid://b7sm6du3nljvq" path="res://assets/main_menu_bg.PNG" id="2_nlkkf"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dffcck51m6au3" path="res://assets/startbutton2.png" id="3_68s1t"]
 [ext_resource type="Texture2D" uid="uid://d0t71tcxjuh5q" path="res://assets/quitbutton1.png" id="4_bgpcw"]
 [ext_resource type="Texture2D" uid="uid://ct5mqqmjv1nsq" path="res://assets/quitbutton2.png" id="5_iea5g"]
+[ext_resource type="Texture2D" uid="uid://btyqsgyhit6b" path="res://assets/player2.png" id="7_8qtwp"]
+[ext_resource type="Texture2D" uid="uid://dgbfm81ec3ok6" path="res://assets/player2_yellow.png" id="8_dy7ct"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_b4kwu")
@@ -28,13 +30,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 600.0
-offset_top = 153.0
-offset_right = 2400.0
-offset_bottom = 1353.0
+offset_left = 608.99994
+offset_top = 151.0
+offset_right = 2409.0
+offset_bottom = 1351.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.15, 0.15)
+scale = Vector2(0.13, 0.13)
 texture_normal = ExtResource("2_oh4iu")
 texture_hover = ExtResource("3_68s1t")
 
@@ -45,23 +47,25 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 611.0
-offset_top = 256.0
-offset_right = 2411.0
-offset_bottom = 1456.0
+offset_left = -23.0
+offset_top = 450.0
+offset_right = 1777.0
+offset_bottom = 1650.0
 grow_horizontal = 2
 grow_vertical = 0
-scale = Vector2(0.13, 0.13)
+scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("4_bgpcw")
 texture_hover = ExtResource("5_iea5g")
 
-[node name="TwoPlayerMode" type="Button" parent="ButtonManager"]
+[node name="TwoPlayerMode" type="TextureButton" parent="ButtonManager"]
 layout_mode = 0
-offset_left = 148.0
-offset_top = 473.0
-offset_right = 415.0
-offset_bottom = 569.0
-text = "2-Player Mode"
+offset_left = 626.0
+offset_top = 312.0
+offset_right = 2426.0
+offset_bottom = 1512.0
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource("7_8qtwp")
+texture_hover = ExtResource("8_dy7ct")
 
 [connection signal="pressed" from="ButtonManager/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="ButtonManager/QuitButton" to="." method="_on_quit_button_pressed"]
