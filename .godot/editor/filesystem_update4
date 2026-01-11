@@ -4,3 +4,9 @@ res://loading_screen.tscn
 res://loading_screen.gd
 res://bot_opponent.tscn
 res://bot_opponent.gd
+res://main_menu.tscn
+res://main_menu.gd
+res://globals.gd
+res://main.tscn
+res://loading_screen_2.gd
+res://loading_screen_2.tscn

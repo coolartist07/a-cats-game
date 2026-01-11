@@ -1,9 +1,9 @@
+Node
+Button
 AudioStreamPlayer
 Sprite2D
 CanvasLayer
-Button
 AnimatedSprite2D
-Node
 Control
 Panel
 TextureButton

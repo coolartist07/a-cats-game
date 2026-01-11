@@ -57,8 +57,8 @@ coin_scene = ExtResource("2_164kh")
 scratch_scene = ExtResource("3_nufhb")
 
 [node name="Board" parent="." instance=ExtResource("2_8n7s7")]
-position = Vector2(301.748, 301.748)
-scale = Vector2(0.295168, 0.295168)
+position = Vector2(299.7248, 299.7248)
+scale = Vector2(1.0009173, 1.0009173)
 texture = ExtResource("7_ibues")
 
 [node name="SidePanel" type="Panel" parent="."]

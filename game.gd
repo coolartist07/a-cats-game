@@ -22,8 +22,8 @@ var diagonal2 : int
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	board_size = $Board.texture.get_width()
-	# divide board size by 10.24 to get size of individual cell (texture is big)
-	cell_size = board_size / 10.24
+	# divide board size by 3 to get size of individual cell (texture is big)
+	cell_size = board_size / 3
 	
 	# get coordinates of small panel on right side of window
 	player_panel_pos = $NextPlayerPanel.get_position()
@@ -49,7 +49,9 @@ func _input(event):
 					grid_data[grid_pos.y][grid_pos.x] = player
 					
 					# place that player's marker / offset mark by half a cell
-					coin_sfx.play()
+					if player == 1:
+						coin_sfx.play()
+					
 					create_marker(player, grid_pos * cell_size + Vector2i(cell_size / 2, cell_size / 2))
 					
 					if check_win() != 0:
