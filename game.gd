@@ -2,6 +2,7 @@ extends Node
 
 @export var coin_scene : PackedScene
 @export var scratch_scene : PackedScene
+@onready var coin_sfx: AudioStreamPlayer = $coin_sfx
 
 # variable declarations
 var player : int
@@ -48,6 +49,7 @@ func _input(event):
 					grid_data[grid_pos.y][grid_pos.x] = player
 					
 					# place that player's marker / offset mark by half a cell
+					coin_sfx.play()
 					create_marker(player, grid_pos * cell_size + Vector2i(cell_size / 2, cell_size / 2))
 					
 					if check_win() != 0:
