@@ -3,6 +3,7 @@ extends Node
 @export var coin_scene : PackedScene
 @export var scratch_scene : PackedScene
 @onready var coin_sfx: AudioStreamPlayer = $coin_sfx
+@onready var scratch_sfx: AudioStreamPlayer = $scratch_sfx
 
 # variable declarations
 var player : int
@@ -145,7 +146,8 @@ func bot_turn():
 	# place the bot's marker / offset mark by half a cell
 	create_marker(player, grid_pos * cell_size + Vector2i(cell_size / 2, cell_size / 2))
 	check_game_over()
-
+	scratch_sfx.play()
+	
 	# other player's turn
 	player *= -1
 

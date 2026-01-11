@@ -3,6 +3,7 @@ extends Node
 @export var coin_scene : PackedScene
 @export var scratch_scene : PackedScene
 @onready var coin_sfx: AudioStreamPlayer = $coin_sfx
+@onready var scratch_sfx: AudioStreamPlayer = $scratch_sfx
 
 # variable declarations
 var player : int
@@ -73,6 +74,8 @@ func _input(event):
 					# play move sound effect
 					if player == 1:
 						coin_sfx.play()
+					elif player == -1:
+						scratch_sfx.play()
 					
 					# other player's turn
 					player *= -1

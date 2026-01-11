@@ -1,3 +1,4 @@
-res://game_over_menu.tscn
-res://game_over_menu.gd
-res://main.tscn
+res://game.tscn
+res://game.gd
+res://bot_opponent.tscn
+res://bot_opponent.gd
