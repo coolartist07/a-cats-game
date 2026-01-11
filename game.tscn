@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c50anptber27i"]
+[gd_scene load_steps=13 format=3 uid="uid://c50anptber27i"]
 
 [ext_resource type="Script" uid="uid://imewsrg35dfi" path="res://game.gd" id="1_7kqi7"]
 [ext_resource type="PackedScene" uid="uid://dd3ea6r2gtaru" path="res://board.tscn" id="2_ax617"]
@@ -9,9 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://du3x1428ksy5t" path="res://cat_2.tscn" id="7_cir2m"]
 [ext_resource type="PackedScene" uid="uid://bjrmwa1u0rugo" path="res://cat_1.tscn" id="7_mfy0r"]
 [ext_resource type="AudioStream" uid="uid://ck83mpe24pktg" path="res://sounds/coin.wav" id="9_vef74"]
+[ext_resource type="AudioStream" uid="uid://dapsafhpp7rdb" path="res://sounds/scratch.wav" id="10_hve3p"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1syas"]
-bg_color = Color(0, 0.666667, 0.803922, 1)
+bg_color = Color(0.3341374, 0.63871914, 0.80209035, 1)
 border_width_left = 5
 border_color = Color(0, 0, 0, 1)
 
@@ -99,5 +100,9 @@ frame_progress = 0.0
 [node name="coin_sfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_vef74")
 volume_db = -0.135
+
+[node name="scratch_sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_hve3p")
+pitch_scale = 1.44
 
 [connection signal="restart" from="GameOverMenu" to="." method="_on_game_over_menu_restart"]
