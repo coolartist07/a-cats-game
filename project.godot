@@ -24,3 +24,8 @@ window/size/resizable=false
 [dotnet]
 
 project/assembly_name="A Cat-s Game"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

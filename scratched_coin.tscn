@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cne5mthmjp5p0"]
+
+[ext_resource type="Texture2D" uid="uid://b6d0maiv2imu3" path="res://assets/scratched_coin.png" id="1_gkdm7"]
+
+[node name="scratched_coin" type="Sprite2D"]
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("1_gkdm7")
