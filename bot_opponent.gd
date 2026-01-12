@@ -135,16 +135,27 @@ func check_game_over():
 	# show game over menu
 		$GameOverMenu.show()
 
+		# hide which cat wins until conditions are met
+		$GameOverMenu.get_node("Cat1").hide()
+		$GameOverMenu.get_node("cat2").hide()
+		
 		if winner == 1:
+			$GameOverMenu.get_node("Cat1").show()
 			$GameOverMenu.get_node("ResultLabel").text = "Player 1 Wins!"
 
 		elif winner == -1:
+			$GameOverMenu.get_node("cat2").show()
 			$GameOverMenu.get_node("ResultLabel").text = "Player 2 Wins!"
 
 	# check if the board is filled (tie game)
 	elif moves == 9:
 		get_tree().paused = true
 		$GameOverMenu.show()
+		$GameOverMenu.get_node("Cat1").hide()
+		$GameOverMenu.get_node("cat2").hide()
+						
+		# show cats game sprite
+		
 		$GameOverMenu.get_node("ResultLabel").text = "Cat's Game!"
 
 func bot_turn():

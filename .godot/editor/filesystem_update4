@@ -1,5 +1,5 @@
-res://bot_opponent.gd
 res://bot_opponent.tscn
+res://bot_opponent.gd
 res://game_over_menu.tscn
-res://main_menu.tscn
 res://game.tscn
+res://game.gd
