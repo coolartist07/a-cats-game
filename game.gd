@@ -32,6 +32,15 @@ func _process(delta: float) -> void:
 	pass
 
 func _input(event):
+	# change player panel to green to show whose turn it is
+	if player == 1:
+		$Player1_Green.show()
+		$Player2_Green.hide()
+	elif player == -1:
+		# show green panel on player 2 to indicate it's their turn
+		$Player2_Green.show()
+		$Player1_Green.hide()
+
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			# check if mouse is on game board
@@ -57,6 +66,8 @@ func _input(event):
 						# hide which cat wins until conditions are met
 						$GameOverMenu.get_node("Cat1").hide()
 						$GameOverMenu.get_node("cat2").hide()
+						$GameOverMenu.get_node("scratched_coin").hide()
+						
 						if winner == 1:
 							$GameOverMenu.get_node("Cat1").show()
 							$GameOverMenu.get_node("ResultLabel").text = "Player 1 Wins!"
@@ -73,7 +84,7 @@ func _input(event):
 						$GameOverMenu.get_node("cat2").hide()
 						
 						# show cats game sprite
-						
+						$GameOverMenu.get_node("scratched_coin").show()
 						$GameOverMenu.get_node("ResultLabel").text = "Cat's Game!"
 
 					# play move sound effect
@@ -111,9 +122,11 @@ func new_game():
 	get_tree().call_group("scratches", "queue_free")
 
 	$GameOverMenu.hide()
+	$Player2_Green.hide()
 	
 	# unpause the game
 	get_tree().paused = false
+
 func create_marker(player, position):
 	# create a marker node and it as a child
 	if player == 1:

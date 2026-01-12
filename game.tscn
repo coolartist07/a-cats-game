@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c50anptber27i"]
+[gd_scene load_steps=15 format=3 uid="uid://c50anptber27i"]
 
 [ext_resource type="Script" uid="uid://imewsrg35dfi" path="res://game.gd" id="1_7kqi7"]
 [ext_resource type="PackedScene" uid="uid://dd3ea6r2gtaru" path="res://board.tscn" id="2_ax617"]
@@ -12,12 +12,36 @@
 [ext_resource type="AudioStream" uid="uid://dapsafhpp7rdb" path="res://sounds/scratch.wav" id="10_hve3p"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1syas"]
-bg_color = Color(0.3341374, 0.63871914, 0.80209035, 1)
+bg_color = Color(0.33333334, 0.6392157, 0.8039216, 1)
 border_width_left = 5
 border_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6jn1u"]
 bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hve3p"]
+bg_color = Color(0.29803923, 0.85490197, 0.49411765, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mfdv2"]
+bg_color = Color(0.29803923, 0.85490197, 0.49411765, 1)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
@@ -49,24 +73,6 @@ grow_horizontal = 0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_1syas")
 
-[node name="PlayerLabel" type="Label" parent="."]
-offset_left = 599.0
-offset_top = 199.0
-offset_right = 899.0
-offset_bottom = 266.0
-theme_override_font_sizes/font_size = 30
-text = "Next Player: "
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="NextPlayerPanel" type="Panel" parent="."]
-visible = false
-offset_left = 650.0
-offset_top = 200.0
-offset_right = 850.0
-offset_bottom = 400.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_6jn1u")
-
 [node name="Player1Panel" type="Panel" parent="."]
 offset_left = 656.0
 offset_top = 408.0
@@ -82,6 +88,40 @@ offset_right = 833.0
 offset_bottom = 193.0
 size_flags_horizontal = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_6jn1u")
+
+[node name="Player2_Green" type="Panel" parent="."]
+offset_left = 656.0
+offset_top = 16.0
+offset_right = 833.0
+offset_bottom = 193.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hve3p")
+
+[node name="Player1_Green" type="Panel" parent="."]
+offset_left = 656.0
+offset_top = 408.0
+offset_right = 833.0
+offset_bottom = 585.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mfdv2")
+
+[node name="Player2Label" type="Label" parent="."]
+offset_left = 591.0
+offset_top = 183.0
+offset_right = 891.0
+offset_bottom = 250.0
+theme_override_font_sizes/font_size = 40
+text = "Player 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player1Label" type="Label" parent="."]
+offset_left = 592.0
+offset_top = 344.0
+offset_right = 892.0
+offset_bottom = 411.0
+theme_override_font_sizes/font_size = 40
+text = "Player 1"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="GameOverMenu" parent="." instance=ExtResource("3_dvjp3")]
 process_mode = 2

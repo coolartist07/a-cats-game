@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://clholedril3sl"]
+[gd_scene load_steps=13 format=3 uid="uid://clholedril3sl"]
 
 [ext_resource type="Script" uid="uid://x714w20t83tu" path="res://game_over_menu.gd" id="1_ek37m"]
 [ext_resource type="Texture2D" uid="uid://bd0xq2w6luy5p" path="res://assets/replay1.png" id="2_isdfh"]
@@ -9,14 +9,15 @@
 [ext_resource type="Texture2D" uid="uid://ct5mqqmjv1nsq" path="res://assets/quitbutton2.png" id="5_bayw5"]
 [ext_resource type="PackedScene" uid="uid://bjrmwa1u0rugo" path="res://cat_1.tscn" id="8_bayw5"]
 [ext_resource type="PackedScene" uid="uid://du3x1428ksy5t" path="res://cat_2.tscn" id="9_20gq0"]
+[ext_resource type="PackedScene" uid="uid://cne5mthmjp5p0" path="res://scratched_coin.tscn" id="10_ytxt5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ra2bs"]
-bg_color = Color(0, 0.239216, 0.698039, 1)
+bg_color = Color(0.7726838, 0.19129544, 0.15617898, 1)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
-border_color = Color(0.976471, 0.576471, 0.8, 1)
+border_color = Color(0.9490196, 0.68235296, 0.11764706, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_20gq0"]
 bg_color = Color(0.9490196, 0.68235296, 0.11764706, 1)
@@ -102,6 +103,9 @@ position = Vector2(754.00006, 193.99997)
 scale = Vector2(0.08835938, 0.087792)
 frame = 0
 frame_progress = 0.0
+
+[node name="scratched_coin" parent="." instance=ExtResource("10_ytxt5")]
+position = Vector2(751.00006, 191.00002)
 
 [connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="HomeButton" to="." method="_on_home_button_pressed"]

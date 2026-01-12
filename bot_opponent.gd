@@ -32,6 +32,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if player == -1:
+		
 		bot_turn()
 
 func _input(event):
@@ -133,7 +134,8 @@ func check_game_over():
 		# hide which cat wins until conditions are met
 		$GameOverMenu.get_node("Cat1").hide()
 		$GameOverMenu.get_node("cat2").hide()
-		
+		$GameOverMenu.get_node("scratched_coin").hide()
+
 		if winner == 1:
 			$GameOverMenu.get_node("Cat1").show()
 			$GameOverMenu.get_node("ResultLabel").text = "You Win!"
@@ -150,7 +152,7 @@ func check_game_over():
 		$GameOverMenu.get_node("cat2").hide()
 						
 		# show cats game sprite
-		
+		$GameOverMenu.get_node("scratched_coin").show()
 		$GameOverMenu.get_node("ResultLabel").text = "Cat's Game!"
 
 func bot_turn():
