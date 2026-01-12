@@ -1,3 +1,4 @@
+Label
 TextureButton
 AudioStreamPlayer
 Button
@@ -7,4 +8,3 @@ CanvasLayer
 AnimatedSprite2D
 Control
 Panel
-Label

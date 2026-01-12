@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c4o6y8uia7qqj"]
+[gd_scene load_steps=14 format=3 uid="uid://c4o6y8uia7qqj"]
 
 [ext_resource type="Script" uid="uid://cupys0xm3n35f" path="res://bot_opponent.gd" id="1_yhr68"]
 [ext_resource type="PackedScene" uid="uid://dd3ea6r2gtaru" path="res://board.tscn" id="2_8n7s7"]
@@ -15,18 +15,6 @@
 bg_color = Color(0.33333334, 0.6392157, 0.8039216, 1)
 border_width_left = 5
 border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kxeqt"]
-bg_color = Color(1, 1, 1, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-shadow_offset = Vector2(5, 5)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ol1nf"]
 bg_color = Color(1, 1, 1, 1)
@@ -73,24 +61,6 @@ grow_horizontal = 0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_wgexx")
 
-[node name="PlayerLabel" type="Label" parent="."]
-offset_left = 599.0
-offset_top = 199.0
-offset_right = 899.0
-offset_bottom = 266.0
-theme_override_font_sizes/font_size = 30
-text = "Next Player: "
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="NextPlayerPanel" type="Panel" parent="."]
-visible = false
-offset_left = 650.0
-offset_top = 200.0
-offset_right = 850.0
-offset_bottom = 400.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_kxeqt")
-
 [node name="Player1Panel" type="Panel" parent="."]
 offset_left = 656.0
 offset_top = 408.0
@@ -128,5 +98,22 @@ volume_db = -0.135
 [node name="scratch_sfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_oeblu")
 pitch_scale = 1.44
+
+[node name="Player1Label" type="Label" parent="."]
+offset_left = 664.0
+offset_top = 352.0
+offset_right = 818.0
+offset_bottom = 407.0
+theme_override_font_sizes/font_size = 40
+text = "You"
+horizontal_alignment = 1
+
+[node name="Player2Label" type="Label" parent="."]
+offset_left = 688.0
+offset_top = 184.0
+offset_right = 808.0
+offset_bottom = 239.0
+theme_override_font_sizes/font_size = 40
+text = "Figaro"
 
 [connection signal="restart" from="GameOverMenu" to="." method="_on_game_over_menu_restart"]

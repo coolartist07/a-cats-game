@@ -9,7 +9,7 @@ extends Node
 var player : int
 var moves : int
 var winner : int
-var temp_marker
+#var temp_marker
 var player_panel_pos : Vector2i
 var grid_data : Array
 var grid_pos : Vector2i	#i stands for integer
@@ -26,8 +26,6 @@ func _ready() -> void:
 	# divide board size by 3 to get size of individual cell
 	cell_size = board_size / 3
 	
-	# get coordinates of small panel on right side of window
-	player_panel_pos = $NextPlayerPanel.get_position()
 	
 	new_game()
 
@@ -91,24 +89,21 @@ func new_game():
 	get_tree().call_group("coins", "queue_free")
 	get_tree().call_group("scratches", "queue_free")
 
-	# create a marker to show starting player's turn
-	create_marker(player, player_panel_pos + Vector2i(cell_size / 2, cell_size / 2), true)
 	$GameOverMenu.hide()
 	
 	# unpause the game
 	get_tree().paused = false
-func create_marker(player, position, temp = false):
+func create_marker(player, position):
 	# create a marker node and it as a child
 	if player == 1:
 		var lucky_coin = coin_scene.instantiate()
 		lucky_coin.position = position
 		add_child(lucky_coin)
-		if temp: temp_marker = lucky_coin
+
 	elif player == -1:
 		var scratch = scratch_scene.instantiate()
 		scratch.position = position
 		add_child(scratch)
-		if temp: temp_marker = scratch
 
 func check_win():
 	# add up the marker in each row, column, and diagonal
@@ -141,11 +136,11 @@ func check_game_over():
 		
 		if winner == 1:
 			$GameOverMenu.get_node("Cat1").show()
-			$GameOverMenu.get_node("ResultLabel").text = "Player 1 Wins!"
+			$GameOverMenu.get_node("ResultLabel").text = "You Win!"
 
 		elif winner == -1:
 			$GameOverMenu.get_node("cat2").show()
-			$GameOverMenu.get_node("ResultLabel").text = "Player 2 Wins!"
+			$GameOverMenu.get_node("ResultLabel").text = "Figaro Wins!"
 
 	# check if the board is filled (tie game)
 	elif moves == 9:
