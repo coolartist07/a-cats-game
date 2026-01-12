@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://carelehhpd4vg"]
+
+[ext_resource type="AudioStream" uid="uid://of17uhrytw6v" path="res://sounds/click.mp3" id="1_bppch"]
+
+[node name="click_sfx" type="AudioStreamPlayer"]
+stream = ExtResource("1_bppch")
+pitch_scale = 0.87

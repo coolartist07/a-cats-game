@@ -1,8 +1,9 @@
+AudioStreamPlayer2D
+AudioStreamPlayer
 Sprite2D
 Panel
 Label
 TextureButton
-AudioStreamPlayer
 Button
 Node
 CanvasLayer
